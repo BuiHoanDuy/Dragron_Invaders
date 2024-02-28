@@ -35,16 +35,25 @@ public class Bullet extends Entity{
 		getMonsterBulletImage();
 		getBulletImage();
 	}
+	
+	public Bullet(GamePanel gp, int desX, int desY, int xx, int yy) {
+		this.gp = gp;
+		destinationPosionX = desX;
+		destinationPosionY = desY;
+		bulletLevel = 1;
+
+		setDefaultValue();
+		getMonsterBulletImage();
+		getBulletImage();
+		x = xx; 
+		y = yy;
+	}
 
 	public void setDefaultValue() {
 		// set default pposition
 		x = gp.player.x + 37; // cộng 37 để đạn trôi vào chính giữa của máy bay
 		y = gp.player.y;
 		speed = 8;
-	}
-	public void setValue(int xx, int yy) {
-		x = xx; 
-		y = yy;
 	}
 
 	public void getMonsterBulletImage() {

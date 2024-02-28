@@ -27,7 +27,7 @@ public class bulletList {
 		
 		for (int i = 0; i < bullet.size(); i++) {
 			bullet.get(i).move(bullet.get(i).destinationPosionX, bullet.get(i).destinationPosionY);
-			if (bullet.get(i).x == 0) {
+			if (bullet.get(i).y < -20) {
 				bullet.remove(i);
 			}
 		}

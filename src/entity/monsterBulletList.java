@@ -19,7 +19,6 @@ public class monsterBulletList {
 		bullet = new ArrayList<Bullet>();
 	}
 
-
 	public void createMonsterBulletList() {
 
 		// random the positon of monsterBullet and set the percentage of it.
@@ -28,30 +27,26 @@ public class monsterBulletList {
 		if (gp.monsterList.monster.size() > 0) {
 			randomMonsterIndex = ThreadLocalRandom.current().nextInt(0, gp.monsterList.monster.size());
 			if (random == 1) {
-				
-				System.out.println(1);
-				
-				Bullet bulletTemp = new Bullet(gp, gp.monsterList.monster.get(randomMonsterIndex).x, 750);
-				bulletTemp.setValue(gp.monsterList.monster.get(randomMonsterIndex).x,
-						gp.monsterList.monster.get(randomMonsterIndex).y);
-				bullet.add(bulletTemp);
+				bullet.add(new Bullet(gp, gp.monsterList.monster.get(randomMonsterIndex).x + 20, 750,
+						gp.monsterList.monster.get(randomMonsterIndex).x + 20,
+						gp.monsterList.monster.get(randomMonsterIndex).y));
 			}
 		}
-		
 	}
 
 	public void update() { // update position of monsterList
-		
+
 		// reset counterForMonster
-		if (gp.countForMonsterBullet == 50) gp.countForMonsterBullet = 0;
-		
+		if (gp.countForMonsterBullet == 50)
+			gp.countForMonsterBullet = 0;
+
 		if (gp.countForMonsterBullet == 1) {
 			createMonsterBulletList();
 		}
 
 		for (int i = 0; i < bullet.size(); i++) {
 			bullet.get(i).move(bullet.get(i).destinationPosionX, bullet.get(i).destinationPosionY);
-			if (bullet.get(i).y == 749) {
+			if (bullet.get(i).y > 749) {
 				bullet.remove(i);
 			}
 		}

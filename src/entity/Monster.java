@@ -14,18 +14,17 @@ import main.GamePanel;
 public class Monster extends Entity {
 	GamePanel gp;
 
-	boolean status; // whether monster hasn't dead or not;
+	public int lifes;
 
 	public Monster(GamePanel gp) {
 		this.gp = gp;
 	}
-
-	public Monster(GamePanel gp, int desX, int desY) {
+	
+	public Monster(GamePanel gp, int desX, int desY, int life) {
 		this.gp = gp;
 		destinationPosionX = desX;
 		destinationPosionY = desY;
-		status = true;
-		
+		lifes = life;
 
 		setDefaultValue();
 		getMonsterImage();
@@ -60,6 +59,7 @@ public class Monster extends Entity {
 		if (gp.countLoop > 15) {
 			gp.countLoop = 0;
 		}
+		
 	}
 
 	public void draw(Graphics2D g2) {
