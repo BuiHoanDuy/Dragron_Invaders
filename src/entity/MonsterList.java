@@ -75,7 +75,6 @@ public class MonsterList {
 		if (gp.countLoop > 10) {
 			gp.countLoop = 0;
 		}
-
 	}
 
 	public void draw(Graphics2D g2) {

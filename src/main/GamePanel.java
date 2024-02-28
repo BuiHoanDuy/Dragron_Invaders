@@ -13,6 +13,7 @@ import entity.Monster;
 import entity.MonsterList;
 import entity.Player;
 import entity.bulletList;
+import entity.monsterBulletList;
 
 public class GamePanel extends JPanel implements Runnable {
 	public int countLoop, countForMonsterBullet;
@@ -33,9 +34,9 @@ public class GamePanel extends JPanel implements Runnable {
 	keyHandler keyH = new keyHandler();
 	
 	public Player player = new Player(this, keyH);
-	//Monster monster = new Monster(this,0,0); 
-	MonsterList monsterList = new MonsterList(this);
-	bulletList bulletList = new bulletList(this);
+	public MonsterList monsterList = new MonsterList(this);
+	public bulletList bulletList = new bulletList(this);
+	public monsterBulletList monsterBulletList = new monsterBulletList(this);
 	
 	public GamePanel() {
 		countLoop = 0; countForMonsterBullet = 0;
@@ -77,7 +78,7 @@ public class GamePanel extends JPanel implements Runnable {
 				Thread.sleep((long) remainingTime);
 				
 				nextDrawTime += drawInterval;
-				countLoop ++;
+				countLoop ++; countForMonsterBullet++;
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -91,6 +92,7 @@ public class GamePanel extends JPanel implements Runnable {
 		player.update();
 		monsterList.update(1);
 		bulletList.update();
+		monsterBulletList.update();
 	}
 	
 	public void paintComponent(Graphics g) {
@@ -104,6 +106,8 @@ public class GamePanel extends JPanel implements Runnable {
 		
 		bulletList.draw(g2);
 
+		monsterBulletList.draw(g2);
+		
 		g2.dispose();
 	}
 }

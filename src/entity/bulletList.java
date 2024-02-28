@@ -24,6 +24,7 @@ public class bulletList {
 		if (gp.countLoop == 5) {
 			createBulletList();			
 		}
+		
 		for (int i = 0; i < bullet.size(); i++) {
 			bullet.get(i).move(bullet.get(i).destinationPosionX, bullet.get(i).destinationPosionY);
 			if (bullet.get(i).x == 0) {

@@ -17,7 +17,9 @@ public class Bullet extends Entity{
 	private BufferedImage bullet3;
 	private BufferedImage bullet4;
 	private BufferedImage bullet5;
+	public BufferedImage monsterBulletImage;
 	public int bulletLevel; 
+	
 
 	public Bullet(GamePanel gp) {
 		this.gp = gp;
@@ -30,6 +32,7 @@ public class Bullet extends Entity{
 		bulletLevel = 1;
 
 		setDefaultValue();
+		getMonsterBulletImage();
 		getBulletImage();
 	}
 
@@ -44,6 +47,15 @@ public class Bullet extends Entity{
 		y = yy;
 	}
 
+	public void getMonsterBulletImage() {
+		try {
+			monsterBulletImage = ImageIO.read(getClass().getResourceAsStream("/res/bullet/fire_bullet.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public void getBulletImage() {
 		try {
 
@@ -92,7 +104,14 @@ public class Bullet extends Entity{
 		}
 		g2.drawImage(image, x, y, 20, 20, null);
 	}
+	
+	public void drawMonsterBullet(Graphics2D g2) {
 
+		BufferedImage image = monsterBulletImage;
+
+		g2.drawImage(image, x , y, gp.tileSize , gp.tileSize, null);
+	}
+	
 	public void move(int xx, int yy) { // move bullet slowly to the determined point
 		if (x == xx && y == yy)
 			return;
