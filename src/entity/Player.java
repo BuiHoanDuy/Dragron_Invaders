@@ -78,13 +78,14 @@ public class Player extends Entity {
 			g2.drawImage(image_HP, x, y+80, gp.tileSize * 2 - 80, 20, null);
 		
 		} else if (lifes == 0) {
-			g2.drawImage(image_HP, x, y+80, 0, 20, null);
 			System.out.println("Game Over");
 			g2.drawImage(gp.gameOverImage, 400, 250, 270, 48, null);
-			
-			gp.playSE(5);
-			//lifes = 0;
+			gp.playSE(7);
+			lifes = -1;
+		} else if (lifes == -1) {
+			g2.drawImage(gp.gameOverImage, 400, 250, 270, 48, null);
 		}
+		
 	}
 	
 	public void checkIntersect() { // kiểm tra máy bay có chạm vào viên đạn của Monster chưa.

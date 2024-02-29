@@ -23,13 +23,13 @@ public class monsterBulletList {
 
 		// random the positon of monsterBullet and set the percentage of it.
 		int randomMonsterIndex = 0;
-		int random = ThreadLocalRandom.current().nextInt(1, 2);
+		int random = ThreadLocalRandom.current().nextInt(1, gp.monsterBulletPercentageRandom);
 		if (gp.monsterList.monster.size() > 0) {
 			randomMonsterIndex = ThreadLocalRandom.current().nextInt(0, gp.monsterList.monster.size());
 			if (random == 1) {
 				bullet.add(new Bullet(gp, gp.monsterList.monster.get(randomMonsterIndex).x + 20, 750,
 						gp.monsterList.monster.get(randomMonsterIndex).x + 20,
-						gp.monsterList.monster.get(randomMonsterIndex).y));
+						gp.monsterList.monster.get(randomMonsterIndex).y, gp.monsterBulletSpeed));
 			}
 		}
 	}

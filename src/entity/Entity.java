@@ -10,7 +10,10 @@ public class Entity {
 	
 	public BufferedImage mainCharacter; // image of Player
 	public BufferedImage first, second, third; // image of Enermies
+	public BufferedImage firstYellow, secondYellow, thirdYellow;
+	public BufferedImage firstBlue, secondBlue, thirdBlue;
 	public String direction; // the direction of Player. But we don't need it now;
 	public int destinationPosionX, destinationPosionY; 	// the position that monster will move to;
 	public BufferedImage HP; // HP of enities
+	
 }

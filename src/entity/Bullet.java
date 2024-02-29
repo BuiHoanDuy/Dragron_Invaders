@@ -11,7 +11,7 @@ import main.GamePanel;
 
 public class Bullet extends Entity{
 	GamePanel gp;
-
+	
 	private BufferedImage bullet1;
 	private BufferedImage bullet2;
 	private BufferedImage bullet3;
@@ -19,41 +19,42 @@ public class Bullet extends Entity{
 	private BufferedImage bullet5;
 	public BufferedImage monsterBulletImage;
 	public int bulletLevel; 
-	
 
 	public Bullet(GamePanel gp) {
 		this.gp = gp;
 	}
 	
-	public Bullet(GamePanel gp, int desX, int desY) {
+	public Bullet(GamePanel gp, int desX, int desY, int monsterBulletSpeed) {
 		this.gp = gp;
 		destinationPosionX = desX;
 		destinationPosionY = desY;
 		bulletLevel = 1;
+		//speed = monsterBulletSpeed;
 
-		setDefaultValue();
+		setDefaultValue(monsterBulletSpeed);
 		getMonsterBulletImage();
 		getBulletImage();
 	}
 	
-	public Bullet(GamePanel gp, int desX, int desY, int xx, int yy) {
+	public Bullet(GamePanel gp, int desX, int desY, int xx, int yy, int monsterBulletSpeed) {
 		this.gp = gp;
 		destinationPosionX = desX;
 		destinationPosionY = desY;
 		bulletLevel = 1;
-
-		setDefaultValue();
+		//speed = monsterBulletSpeed;
+		
+		setDefaultValue(monsterBulletSpeed);
 		getMonsterBulletImage();
 		getBulletImage();
 		x = xx; 
 		y = yy;
 	}
 
-	public void setDefaultValue() {
+	public void setDefaultValue(int monsterBulletSpeed) {
 		// set default pposition
 		x = gp.player.x + 37; // cộng 37 để đạn trôi vào chính giữa của máy bay
 		y = gp.player.y;
-		speed = 8;
+		speed = monsterBulletSpeed;
 	}
 
 	public void getMonsterBulletImage() {

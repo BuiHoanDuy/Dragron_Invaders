@@ -19,6 +19,11 @@ import entity.bulletList;
 import entity.monsterBulletList;
 
 public class GamePanel extends JPanel implements Runnable {
+	public int round = 0; // màn người chơi đang chơi
+	public int monsterBulletSpeed = 4; // tốc dộ đạn rơi của MOnster. Tăng speed lên ở phần vẽ map.
+	public int monsterBulletPercentageRandom = 5; // tỉ lệ nhả đạn của Monster. Tăng lên ở phần vẽ map.
+	public int monsterLevel = 0;
+	
 	public BufferedImage gameOverImage;
 	public int countLoop, countForMonsterBullet;
 	// screen setting
@@ -51,12 +56,12 @@ public class GamePanel extends JPanel implements Runnable {
 		
 		this.addKeyListener(keyH);
 		this.setFocusable(true);
+		playMusic(0);
 	}
 	
 	public void startGameThread() {
 		gameThread = new Thread(this);
 		gameThread.start();
-		playMusic(0);
 	}
 	
 	@Override
@@ -96,7 +101,7 @@ public class GamePanel extends JPanel implements Runnable {
 	
 	public void update() {
 		player.update();
-		monsterList.update(1);
+		monsterList.update(round);
 		bulletList.update();
 		monsterBulletList.update();
 	}
@@ -138,5 +143,10 @@ public class GamePanel extends JPanel implements Runnable {
 		}
 		g2.drawImage(background, 0, 0, screenWidth, screenHeight, null);
 		
+	}
+	public void setValueForMonster(int monsterLevel, int monsterBuletSpeed, int monsterBulletPercentageRandom) {
+		this.monsterLevel = monsterLevel;
+		this.monsterBulletSpeed = monsterBuletSpeed;
+		this.monsterBulletPercentageRandom = monsterBulletPercentageRandom;
 	}
 }

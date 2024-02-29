@@ -17,7 +17,7 @@ public class bulletList {
 	}
 
 	public void createBulletList() {
-		bullet.add(new Bullet(gp, gp.player.x  + 37, -50)); // cộng 37 để đạn trôi vào chính giữa của máy bay
+		bullet.add(new Bullet(gp, gp.player.x  + 37, -50, 8)); // cộng 37 để đạn trôi vào chính giữa của máy bay
 	}
 	
 	public void update() { // update position of monsterList
