@@ -5,7 +5,10 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 import controller.keyHandler;
@@ -16,6 +19,7 @@ import entity.bulletList;
 import entity.monsterBulletList;
 
 public class GamePanel extends JPanel implements Runnable {
+	public BufferedImage gameOverImage;
 	public int countLoop, countForMonsterBullet;
 	// screen setting
 	final int originalTileSize = 16; //16x16
@@ -32,6 +36,7 @@ public class GamePanel extends JPanel implements Runnable {
 	
 	Thread gameThread; // fps
 	keyHandler keyH = new keyHandler();
+	Sound sound = new Sound();
 	
 	public Player player = new Player(this, keyH);
 	public MonsterList monsterList = new MonsterList(this);
@@ -51,6 +56,7 @@ public class GamePanel extends JPanel implements Runnable {
 	public void startGameThread() {
 		gameThread = new Thread(this);
 		gameThread.start();
+		playMusic(0);
 	}
 	
 	@Override
@@ -99,6 +105,7 @@ public class GamePanel extends JPanel implements Runnable {
 		super.paintComponent(g);
 		
 		Graphics2D g2 = (Graphics2D) g;
+		drawBackground(g2);
 		
 		player.draw(g2);
 		
@@ -109,5 +116,27 @@ public class GamePanel extends JPanel implements Runnable {
 		monsterBulletList.draw(g2);
 		
 		g2.dispose();
+	}
+	public void playMusic(int i) {
+		sound.setFile(i);
+		sound.play();
+		sound.loop();
+	}
+	public void stopMusic() {
+		sound.stop();
+	}
+	public void playSE(int i) { // sound effect
+		sound.setFile(i);
+		sound.play();
+	}
+	public void drawBackground(Graphics2D g2) {
+		BufferedImage background = null;
+		try {
+			background = ImageIO.read(getClass().getResourceAsStream("/res/background_galaxy.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		g2.drawImage(background, 0, 0, screenWidth, screenHeight, null);
+		
 	}
 }

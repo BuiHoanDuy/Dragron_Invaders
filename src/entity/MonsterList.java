@@ -17,12 +17,12 @@ public class MonsterList {
 		monster = new ArrayList<Monster>();
 		monsterBulletList = new ArrayList<Bullet>();
 
-		round1Set();
 	}
 
 	public void round1Set() { // cài đặt các vị trí mặc định cho các con Dragon
 		// trừ đi 24px để căn đều 2 bên
-
+		gp.playSE(2);
+		
 		monster.add(new Monster(gp, 48 - 24, 0, 3));
 		monster.add(new Monster(gp, 144 - 24, 0, 3));
 		monster.add(new Monster(gp, 240 - 24, 0, 3));
@@ -58,22 +58,51 @@ public class MonsterList {
 	}
 
 	// round2Update, round3Update, ... complete in the future
-	public void round1Update() { // update position of monsterList
+	public void movementUpdate() { // update position of monsterList
 		int percentageOfMonsterBullet;
 
 		for (int i = 0; i < monster.size(); i++) {
-
+			// move monster
 			monster.get(i).move(monster.get(i).destinationPosionX, monster.get(i).destinationPosionY);
 		}
-		
+
+	}
+
+	public void checkDeath() {
+		// check Death
+		for (int i = monster.size()-1; i >= 0; i--) {
+			for (int j = 0; j < gp.bulletList.bullet.size(); j++) {
+				if (monster.get(i).x <= gp.bulletList.bullet.get(j).x
+						&& monster.get(i).x + 80 >= gp.bulletList.bullet.get(j).x
+						&& monster.get(i).y + 48 >= gp.bulletList.bullet.get(j).y 
+						&& monster.get(i).y <= gp.bulletList.bullet.get(j).y+20) {
+					monster.get(i).lifes--;
+					//gp.playSE(5);
+					gp.bulletList.bullet.remove(j);
+					
+					//Delete monsster
+					if (monster.get(i).lifes == 0) {
+						monster.remove(i);
+						gp.playSE(1);
+					}
+				}
+			}
+		}
 	}
 
 	public void update(int round) { // truyền round số mấy vào để update cho phù hợp, sử dụng If else;
-		if (round == 1) {
-			round1Update();
-		}
+		movementUpdate();
 		if (gp.countLoop > 10) {
 			gp.countLoop = 0;
+		}
+		try {
+			checkDeath();		
+		} catch (Exception e) {
+		}
+		
+		if (gp.monsterList.monster.size() == 0) {
+			gp.playSE(4);
+			round1Set();
 		}
 	}
 
@@ -82,6 +111,5 @@ public class MonsterList {
 		for (int i = 0; i < monster.size(); i++) {
 			monster.get(i).draw(g2);
 		}
-		
 	}
 }

@@ -22,7 +22,7 @@ public class bulletList {
 	
 	public void update() { // update position of monsterList
 		if (gp.countLoop == 5) {
-			createBulletList();			
+			createBulletList();		
 		}
 		
 		for (int i = 0; i < bullet.size(); i++) {
