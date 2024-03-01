@@ -133,13 +133,13 @@ public class Monster extends Entity {
 		g2.drawImage(image, x, y, gp.tileSize * 2, gp.tileSize, null);
 	}
 
-	public void move(int xx, int yy) { // move monster slowly to the determined point
-		if (x == xx && y == yy)
+	public void move(double destinationPosionX, int yy) { // move monster slowly to the determined point
+		if (x == destinationPosionX && y == yy)
 			return;
 		else {
-			if (x < xx) {
+			if (x < destinationPosionX) {
 				x += speed;
-			} else if (x > xx) {
+			} else if (x > destinationPosionX) {
 				x -= speed;
 			}
 

@@ -19,6 +19,7 @@ public class Sound {
 		soundURL[5] = getClass().getResource("/res/Dragon_Invader_Sound/shoot2.wav");
 		soundURL[6] = getClass().getResource("/res/Dragon_Invader_Sound/hurt.wav");
 		soundURL[7] = getClass().getResource("/res/Dragon_Invader_Sound/game_over.wav");
+		soundURL[8] = getClass().getResource("/res/Dragon_Invader_Sound/collect_coin.wav");
 	}
 	
 	public void setFile(int i) {

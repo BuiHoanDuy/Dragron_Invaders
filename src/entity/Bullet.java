@@ -18,17 +18,29 @@ public class Bullet extends Entity{
 	private BufferedImage bullet4;
 	private BufferedImage bullet5;
 	public BufferedImage monsterBulletImage;
-	public int bulletLevel; 
+	
+	private BufferedImage wind1;
+	private BufferedImage wind2;
+	private BufferedImage wind3;
+	private BufferedImage wind4;
+	private BufferedImage wind5;
+	
+	private BufferedImage fire1;
+	private BufferedImage fire2;
+	private BufferedImage fire3;
+	private BufferedImage fire4;
+	private BufferedImage fire5;
+	private BufferedImage fire6;
+	private BufferedImage fire7;
 
 	public Bullet(GamePanel gp) {
 		this.gp = gp;
 	}
 	
-	public Bullet(GamePanel gp, int desX, int desY, int monsterBulletSpeed) {
+	public Bullet(GamePanel gp, double desX, int desY, int monsterBulletSpeed) {
 		this.gp = gp;
 		destinationPosionX = desX;
 		destinationPosionY = desY;
-		bulletLevel = 1;
 		//speed = monsterBulletSpeed;
 
 		setDefaultValue(monsterBulletSpeed);
@@ -40,7 +52,6 @@ public class Bullet extends Entity{
 		this.gp = gp;
 		destinationPosionX = desX;
 		destinationPosionY = desY;
-		bulletLevel = 1;
 		//speed = monsterBulletSpeed;
 		
 		setDefaultValue(monsterBulletSpeed);
@@ -67,17 +78,25 @@ public class Bullet extends Entity{
 	}
 	
 	public void getBulletImage() {
-		try {
+		try {		
+			bullet1 = ImageIO.read(getClass().getResourceAsStream("/res/bullet/bullet_4.png")); // default
 
-			bullet1 = ImageIO.read(getClass().getResourceAsStream("/res/bullet/bullet_2.png"));
-
-			bullet2 = ImageIO.read(getClass().getResourceAsStream("/res/bullet/bullet_2.png"));
-
-			bullet3 = ImageIO.read(getClass().getResourceAsStream("/res/bullet/bullet_3.png"));	
+			bullet2 = ImageIO.read(getClass().getResourceAsStream("/res/bullet/bullet_5.png")); // Red - ground
 			
-			bullet4 = ImageIO.read(getClass().getResourceAsStream("/res/bullet/bullet_4.png"));
-
-			bullet5 = ImageIO.read(getClass().getResourceAsStream("/res/bullet/bullet_5.png"));
+			wind1= ImageIO.read(getClass().getResourceAsStream("/res//wind_ball/LightEffect_16.png"));
+			wind2= ImageIO.read(getClass().getResourceAsStream("/res//wind_ball/LightEffect_17.png"));
+			wind3= ImageIO.read(getClass().getResourceAsStream("/res//wind_ball/LightEffect_18.png"));
+			wind4= ImageIO.read(getClass().getResourceAsStream("/res//wind_ball/LightEffect_19.png"));
+			wind5= ImageIO.read(getClass().getResourceAsStream("/res//wind_ball/LightEffect_20.png"));
+			
+			fire1 = ImageIO.read(getClass().getResourceAsStream("/res//fire_ball/Effects_Fire_0_04.png"));
+			fire2 = ImageIO.read(getClass().getResourceAsStream("/res//fire_ball/Effects_Fire_0_08.png"));
+			fire3 = ImageIO.read(getClass().getResourceAsStream("/res//fire_ball/Effects_Fire_0_12.png"));
+			fire4 = ImageIO.read(getClass().getResourceAsStream("/res//fire_ball/Effects_Fire_0_16.png"));
+			fire5 = ImageIO.read(getClass().getResourceAsStream("/res//fire_ball/Effects_Fire_0_20.png"));
+			fire6 = ImageIO.read(getClass().getResourceAsStream("/res//fire_ball/Effects_Fire_0_24.png"));
+			fire7 = ImageIO.read(getClass().getResourceAsStream("/res//fire_ball/Effects_Fire_0_28.png"));
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -88,31 +107,84 @@ public class Bullet extends Entity{
 		
 	}
 
+	public void drawWindBall(Graphics2D g2) {
+
+		BufferedImage image = null;
+
+		switch (gp.countLoop) {
+		case 1,2,3:
+			image = wind1;
+			break;
+		case 4,5,6:
+			image = wind2;
+			break;
+		case 7,8,9:
+			image = wind3;
+			break;
+		case 10,11,12:
+			image = wind4;
+			break;
+		case 13,14,15:
+			image = wind5;
+			break;
+		default:
+			image = wind1;
+			break;
+		}
+		g2.drawImage(image, x-2, y, 60, 60, null);
+	}
+	
+	public void drawFireBall(Graphics2D g2) {
+
+		BufferedImage image = null;
+
+
+		switch (gp.countLoop) {
+		case 1,2:
+			image = fire1;
+			break;
+		case 3,4:
+			image = fire2;
+			break;
+		case 5,6:
+			image =fire3;
+			break;
+		case 7,8:
+			image = fire4;
+			break;
+		case 9,10:
+			image = fire5;
+			break;
+		case 11,12:
+			image = fire6;
+			break;
+		case 13,14,15:
+			image = fire7;
+			break;
+		default:
+			image = fire1;
+			break;
+		}
+		g2.drawImage(image, x-2, y, 40, 60, null);
+	}
+	
+	
 	public void draw(Graphics2D g2) {
 
 		BufferedImage image = null;
 
-		switch (bulletLevel) {
+		switch (gp.bulletLevel) {
 		case 1:
 			image = bullet1;
 			break;
 		case 2:
 			image = bullet2;
 			break;
-		case 3:
-			image = bullet3;
-			break;
-		case 4:
-			image = bullet4;
-			break;
-		case 5:
-			image = bullet5;
-			break;
 		default:
-			image = image;
+			image = bullet2;
 			break;
 		}
-		g2.drawImage(image, x, y, 20, 20, null);
+		g2.drawImage(image, x-2, y, 25, 30, null);
 	}
 	
 	public void drawMonsterBullet(Graphics2D g2) {
@@ -122,14 +194,14 @@ public class Bullet extends Entity{
 		g2.drawImage(image, x , y, gp.tileSize , gp.tileSize, null);
 	}
 	
-	public void move(int xx, int yy) { // move bullet slowly to the determined point
-		if (x == xx && y == yy)
+	public void move(double destinationPosionX, int yy) { // move bullet slowly to the determined point
+		if (x == destinationPosionX && y == yy)
 			return;
 		else {
-			if (x < xx) {
+			if (x < destinationPosionX) {
 				x += speed;
 			}
-			else if (x > xx){
+			else if (x > destinationPosionX){
 				x -= speed;
 			}
 			

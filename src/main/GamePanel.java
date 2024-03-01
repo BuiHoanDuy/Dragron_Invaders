@@ -12,9 +12,12 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 import controller.keyHandler;
+import entity.BlueItemList;
+import entity.GreenItemList;
 import entity.Monster;
 import entity.MonsterList;
 import entity.Player;
+import entity.RedItemList;
 import entity.bulletList;
 import entity.monsterBulletList;
 
@@ -24,8 +27,12 @@ public class GamePanel extends JPanel implements Runnable {
 	public int monsterBulletPercentageRandom = 5; // tỉ lệ nhả đạn của Monster. Tăng lên ở phần vẽ map.
 	public int monsterLevel = 0;
 	
+	public int bulletLevel;  // level of Bullet
+	public int ultiTotal; // amount of ulti player can use. 
+	
 	public BufferedImage gameOverImage;
-	public int countLoop, countForMonsterBullet;
+	public int countLoop, countForMonsterBullet; // countForMonsterBullet_max = 50; countLoop_max = 15;
+	public boolean ultiFlag;
 	// screen setting
 	final int originalTileSize = 16; //16x16
 	final int scale = 3;
@@ -48,8 +55,12 @@ public class GamePanel extends JPanel implements Runnable {
 	public bulletList bulletList = new bulletList(this);
 	public monsterBulletList monsterBulletList = new monsterBulletList(this);
 	
+	public BlueItemList blue = new BlueItemList(this);
+	public RedItemList red = new RedItemList(this);
+	public GreenItemList green = new GreenItemList(this);
+	
 	public GamePanel() {
-		countLoop = 0; countForMonsterBullet = 0;
+		countLoop = 0; countForMonsterBullet = 0; bulletLevel = 1; ultiTotal = 0; ultiFlag =  false;
 		this.setPreferredSize(new Dimension(screenWidth, screenHeight));
 		this.setBackground(Color.black);
 		this.setDoubleBuffered(true);
@@ -104,6 +115,9 @@ public class GamePanel extends JPanel implements Runnable {
 		monsterList.update(round);
 		bulletList.update();
 		monsterBulletList.update();
+		blue.update();
+		red.update();
+		green.update();
 	}
 	
 	public void paintComponent(Graphics g) {
@@ -119,6 +133,10 @@ public class GamePanel extends JPanel implements Runnable {
 		bulletList.draw(g2);
 
 		monsterBulletList.draw(g2);
+		
+		blue.draw(g2);
+		red.draw(g2);
+		green.draw(g2);
 		
 		g2.dispose();
 	}

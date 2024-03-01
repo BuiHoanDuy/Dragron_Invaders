@@ -71,6 +71,7 @@ public class MonsterList {
 		monster.add(new Monster(gp, 480, 0, 1));
 		monster.add(new Monster(gp, 864, 0, 1));
 	}
+
 	public void round2Set() {
 		gp.playSE(2);
 
@@ -80,6 +81,7 @@ public class MonsterList {
 		monster.add(new Monster(gp, 672, 0, 1));
 		monster.add(new Monster(gp, 864, 0, 1));
 	}
+
 	public void round3Set() {
 		gp.playSE(2);
 
@@ -88,12 +90,13 @@ public class MonsterList {
 		monster.add(new Monster(gp, 480, 0, 1));
 		monster.add(new Monster(gp, 672, 0, 1));
 		monster.add(new Monster(gp, 864, 0, 1));
-		
+
 		monster.add(new Monster(gp, 144, 48, 1));
 		monster.add(new Monster(gp, 336, 48, 1));
 		monster.add(new Monster(gp, 576, 48, 1));
 		monster.add(new Monster(gp, 768, 48, 1));
 	}
+
 	public void round4Set() {
 		gp.playSE(2);
 
@@ -102,20 +105,20 @@ public class MonsterList {
 		monster.add(new Monster(gp, 480, 0, 2));
 		monster.add(new Monster(gp, 672, 0, 2));
 		monster.add(new Monster(gp, 864, 0, 2));
-		
+
 		monster.add(new Monster(gp, 144, 48, 2));
 		monster.add(new Monster(gp, 336, 48, 2));
 		monster.add(new Monster(gp, 576, 48, 2));
 		monster.add(new Monster(gp, 768, 48, 2));
-		
+
 		monster.add(new Monster(gp, 48, 96, 2));
 		monster.add(new Monster(gp, 240, 96, 2));
 		monster.add(new Monster(gp, 480, 96, 2));
 		monster.add(new Monster(gp, 672, 96, 2));
 		monster.add(new Monster(gp, 864, 96, 2));
-		
+
 	}
-	
+
 	public void round5Set() {
 		gp.playSE(2);
 
@@ -128,20 +131,20 @@ public class MonsterList {
 		monster.add(new Monster(gp, 336, 0, 2));
 		monster.add(new Monster(gp, 576, 0, 2));
 		monster.add(new Monster(gp, 768, 0, 2));
-		
+
 		monster.add(new Monster(gp, 144, 48, 2));
 		monster.add(new Monster(gp, 336, 48, 2));
 		monster.add(new Monster(gp, 576, 48, 2));
 		monster.add(new Monster(gp, 768, 48, 2));
-		
+
 		monster.add(new Monster(gp, 48, 96, 2));
 		monster.add(new Monster(gp, 240, 96, 2));
 		monster.add(new Monster(gp, 480, 96, 2));
 		monster.add(new Monster(gp, 672, 96, 2));
 		monster.add(new Monster(gp, 864, 96, 2));
-		
+
 	}
-	
+
 	public void round6Set() {
 		gp.playSE(2);
 
@@ -154,7 +157,7 @@ public class MonsterList {
 		monster.add(new Monster(gp, 336, 0, 2));
 		monster.add(new Monster(gp, 576, 0, 2));
 		monster.add(new Monster(gp, 768, 0, 2));
-		
+
 		monster.add(new Monster(gp, 144, 48, 2));
 		monster.add(new Monster(gp, 336, 48, 2));
 		monster.add(new Monster(gp, 576, 48, 2));
@@ -164,14 +167,15 @@ public class MonsterList {
 		monster.add(new Monster(gp, 480, 48, 2));
 		monster.add(new Monster(gp, 672, 48, 2));
 		monster.add(new Monster(gp, 864, 48, 2));
-		
+
 		monster.add(new Monster(gp, 48, 96, 2));
 		monster.add(new Monster(gp, 240, 96, 2));
 		monster.add(new Monster(gp, 480, 96, 2));
 		monster.add(new Monster(gp, 672, 96, 2));
 		monster.add(new Monster(gp, 864, 96, 2));
-		
+
 	}
+
 	public void round7Set() {
 		gp.playSE(2);
 
@@ -211,10 +215,10 @@ public class MonsterList {
 
 	public void round8Set() {
 		gp.playSE(2);
-		
+
 		// levvel up for Monster
 		gp.setValueForMonster(1, 6, 3);
-		
+
 		monster.add(new Monster(gp, 48 - 24, 0, 3));
 		monster.add(new Monster(gp, 144 - 24, 0, 3));
 		monster.add(new Monster(gp, 240 - 24, 0, 3));
@@ -226,10 +230,10 @@ public class MonsterList {
 		monster.add(new Monster(gp, 816 - 24, 0, 3));
 		monster.add(new Monster(gp, 912 - 24, 0, 3));
 	}
-	
+
 	public void round9Set() {
 		gp.playSE(2);
-		
+
 		gp.setValueForMonster(1, 6, 3);
 
 		monster.add(new Monster(gp, 48 - 24, 0, 3));
@@ -254,12 +258,12 @@ public class MonsterList {
 		monster.add(new Monster(gp, 816 - 24, 48, 3));
 		monster.add(new Monster(gp, 912 - 24, 48, 3));
 	}
-	
+
 	public void round10Set() {
 		gp.playSE(2);
 
 		gp.setValueForMonster(1, 6, 3);
-		
+
 		monster.add(new Monster(gp, 48 - 24, 0, 3));
 		monster.add(new Monster(gp, 144 - 24, 0, 3));
 		monster.add(new Monster(gp, 240 - 24, 0, 3));
@@ -293,24 +297,24 @@ public class MonsterList {
 		monster.add(new Monster(gp, 816 - 24, 96, 3));
 		monster.add(new Monster(gp, 912 - 24, 96, 3));
 	}
-	
+
 	public void round11Set() {
 		gp.playSE(2);
-		
+
 		gp.setValueForMonster(2, 7, 2);
-		
+
 		monster.add(new Monster(gp, 48, 0, 3));
 		monster.add(new Monster(gp, 240, 0, 3));
 		monster.add(new Monster(gp, 480, 0, 3));
 		monster.add(new Monster(gp, 672, 0, 3));
 		monster.add(new Monster(gp, 864, 0, 3));
-		
+
 		monster.add(new Monster(gp, 144, 48, 3));
 		monster.add(new Monster(gp, 336, 48, 3));
 		monster.add(new Monster(gp, 576, 48, 3));
 		monster.add(new Monster(gp, 768, 48, 3));
 	}
-	
+
 	public void round12Set() {
 		gp.playSE(2);
 		gp.setValueForMonster(2, 7, 2);
@@ -324,7 +328,7 @@ public class MonsterList {
 		monster.add(new Monster(gp, 336, 0, 3));
 		monster.add(new Monster(gp, 576, 0, 3));
 		monster.add(new Monster(gp, 768, 0, 3));
-		
+
 		monster.add(new Monster(gp, 144, 48, 3));
 		monster.add(new Monster(gp, 336, 48, 3));
 		monster.add(new Monster(gp, 576, 48, 3));
@@ -334,19 +338,19 @@ public class MonsterList {
 		monster.add(new Monster(gp, 480, 48, 3));
 		monster.add(new Monster(gp, 672, 48, 3));
 		monster.add(new Monster(gp, 864, 48, 3));
-		
+
 		monster.add(new Monster(gp, 48, 96, 3));
 		monster.add(new Monster(gp, 240, 96, 3));
 		monster.add(new Monster(gp, 480, 96, 3));
 		monster.add(new Monster(gp, 672, 96, 3));
 		monster.add(new Monster(gp, 864, 96, 3));
 	}
-	
+
 	public void round13Set() {
 		gp.playSE(2);
 
 		gp.setValueForMonster(2, 7, 2);
-		
+
 		monster.add(new Monster(gp, 48 - 24, 0, 3));
 		monster.add(new Monster(gp, 144 - 24, 0, 3));
 		monster.add(new Monster(gp, 240 - 24, 0, 3));
@@ -380,6 +384,7 @@ public class MonsterList {
 		monster.add(new Monster(gp, 816 - 24, 96, 3));
 		monster.add(new Monster(gp, 912 - 24, 96, 3));
 	}
+
 	public void movementUpdate() { // update position of monsterList
 		int percentageOfMonsterBullet;
 
@@ -400,7 +405,9 @@ public class MonsterList {
 						&& monster.get(i).y <= gp.bulletList.bullet.get(j).y + 20) {
 					monster.get(i).lifes--;
 					// gp.playSE(5);
-					gp.bulletList.bullet.remove(j);
+
+					if (gp.bulletLevel < 10)
+						gp.bulletList.bullet.remove(j);
 
 					// Delete monsster
 					if (monster.get(i).lifes == 0) {
