@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 
 import controller.keyHandler;
 import entity.BlueItemList;
+import entity.BossList;
 import entity.GreenItemList;
 import entity.Monster;
 import entity.MonsterList;
@@ -22,17 +23,18 @@ import entity.bulletList;
 import entity.monsterBulletList;
 
 public class GamePanel extends JPanel implements Runnable {
-	public int round = 0; // màn người chơi đang chơi
+	public int round = 1; // màn người chơi đang chơi
 	public int monsterBulletSpeed = 4; // tốc dộ đạn rơi của MOnster. Tăng speed lên ở phần vẽ map.
 	public int monsterBulletPercentageRandom = 5; // tỉ lệ nhả đạn của Monster. Tăng lên ở phần vẽ map.
-	public int monsterLevel = 0;
+	public int monsterLevel = 0; // level of monster, set in monsterList
+	public int bossLevel = 0; // level of Boss, set value in bossList
 	
 	public int bulletLevel;  // level of Bullet
 	public int ultiTotal; // amount of ulti player can use. 
 	
 	public BufferedImage gameOverImage;
 	public int countLoop, countForMonsterBullet; // countForMonsterBullet_max = 50; countLoop_max = 15;
-	public boolean ultiFlag;
+	public boolean ultiFlag, bossFlag; //boss flag set in Round14 in MOnsterList_Class
 	// screen setting
 	final int originalTileSize = 16; //16x16
 	final int scale = 3;
@@ -54,13 +56,14 @@ public class GamePanel extends JPanel implements Runnable {
 	public MonsterList monsterList = new MonsterList(this);
 	public bulletList bulletList = new bulletList(this);
 	public monsterBulletList monsterBulletList = new monsterBulletList(this);
+	public BossList bossList = new BossList(this);
 	
 	public BlueItemList blue = new BlueItemList(this);
 	public RedItemList red = new RedItemList(this);
 	public GreenItemList green = new GreenItemList(this);
 	
 	public GamePanel() {
-		countLoop = 0; countForMonsterBullet = 0; bulletLevel = 1; ultiTotal = 0; ultiFlag =  false;
+		countLoop = 0; countForMonsterBullet = 0; bulletLevel = 1; ultiTotal = 0; ultiFlag =  false; bossFlag = false;
 		this.setPreferredSize(new Dimension(screenWidth, screenHeight));
 		this.setBackground(Color.black);
 		this.setDoubleBuffered(true);
@@ -118,6 +121,7 @@ public class GamePanel extends JPanel implements Runnable {
 		blue.update();
 		red.update();
 		green.update();
+		bossList.update();
 	}
 	
 	public void paintComponent(Graphics g) {
@@ -133,6 +137,8 @@ public class GamePanel extends JPanel implements Runnable {
 		bulletList.draw(g2);
 
 		monsterBulletList.draw(g2);
+		
+		bossList.draw(g2);
 		
 		blue.draw(g2);
 		red.draw(g2);

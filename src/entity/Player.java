@@ -103,6 +103,9 @@ public class Player extends Entity {
 				System.out.println("die");
 				gp.playSE(6);
 				lifes--;
+				if (gp.bulletLevel<=3) {
+					gp.bulletLevel = 1;
+				} else gp.bulletLevel -= 3;
 			}
 		}
 	}
@@ -115,12 +118,9 @@ public class Player extends Entity {
 			else {
 				gp.ultiFlag = true;
 				count ++;
-				System.out.println(count);
 				if (count > 500) {
 					gp.ultiFlag = false;
 					gp.ultiTotal--;
-					gp.bulletList.bullet.clear();
-					System.out.println("HetHanSuDung");
 					count = 0;
 					flag = false;
 				}

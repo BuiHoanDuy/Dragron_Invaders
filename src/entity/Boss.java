@@ -3,24 +3,21 @@ package entity;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
-import javax.print.attribute.standard.Destination;
 
-import controller.keyHandler;
 import main.GamePanel;
 
-public class Monster extends Entity {
+public class Boss extends Entity{
 	GamePanel gp;
 
 	public int lifes;
 
-	public Monster(GamePanel gp) {
+	public Boss(GamePanel gp) {
 		this.gp = gp;
 	}
 
-	public Monster(GamePanel gp, int desX, int desY, int life) {
+	public Boss(GamePanel gp, int desX, int desY, int life) {
 		this.gp = gp;
 		destinationPosionX = desX;
 		destinationPosionY = desY;
@@ -77,7 +74,7 @@ public class Monster extends Entity {
 
 		BufferedImage image = null;
 
-		if (gp.monsterLevel == 0) {
+		if (gp.bossLevel == 0) {
 			switch (gp.countLoop) {
 			case 0, 1, 2, 3:
 				image = first;
@@ -94,7 +91,7 @@ public class Monster extends Entity {
 				image = image;
 				break;
 			}
-		} else if (gp.monsterLevel == 1) {
+		} else if (gp.bossLevel == 1) {
 			switch (gp.countLoop) {
 			case 0, 1, 2, 3:
 				image = firstYellow;
@@ -111,7 +108,7 @@ public class Monster extends Entity {
 				image = image;
 				break;
 			}
-		} else if (gp.monsterLevel == 2) {
+		} else if (gp.bossLevel == 2) {
 			switch (gp.countLoop) {
 			case 0, 1, 2, 3:
 				image = firstBlue;
@@ -129,7 +126,7 @@ public class Monster extends Entity {
 				break;
 			}
 		}
-			g2.drawImage(image, x, y, gp.tileSize * 2, gp.tileSize, null);
+			g2.drawImage(image, x, y, gp.tileSize * 6, gp.tileSize*3, null);
 	}
 
 	public void move(double destinationPosionX, int yy) { // move monster slowly to the determined point
@@ -149,5 +146,4 @@ public class Monster extends Entity {
 			}
 		}
 	}
-
 }

@@ -42,14 +42,21 @@ public class bulletList {
 				bullet.add(new Bullet(gp, (gp.player.x + 37) + gp.player.y * -Math.tan(0.3), -50, 10));
 			} else if (gp.bulletLevel == 7) {
 				// win ball
-				bullet.add(new Bullet(gp, gp.player.x + 37, -50, 6));
-			} else if (gp.bulletLevel == 8) {
-				bullet.add(new Bullet(gp, gp.player.x + 50, -50, gp.player.x + 50, gp.player.y, 8));
-				bullet.add(new Bullet(gp, gp.player.x + 20, -50, gp.player.x + 20, gp.player.y, 8));
-			} else if (gp.bulletLevel >= 9) {
 				bullet.add(new Bullet(gp, gp.player.x - 10, -50, gp.player.x - 10, gp.player.y, 8));
 				bullet.add(new Bullet(gp, gp.player.x - 10 + 48, -50, gp.player.x - 10 + 48, gp.player.y, 8));
 				bullet.add(new Bullet(gp, gp.player.x - 10 + 96, -50, gp.player.x - 10 + 96, gp.player.y, 8));
+			} else if (gp.bulletLevel == 8) {
+				bullet.add(new Bullet(gp, (gp.player.x + 37) + gp.player.y * Math.tan(0.3), -50, 8));
+				bullet.add(new Bullet(gp, gp.player.x - 10, -50, gp.player.x - 10, gp.player.y, 8));
+				bullet.add(new Bullet(gp, gp.player.x - 10 + 48, -50, gp.player.x - 10 + 48, gp.player.y, 8));
+				bullet.add(new Bullet(gp, gp.player.x - 10 + 96, -50, gp.player.x - 10 + 96, gp.player.y, 8));
+				bullet.add(new Bullet(gp, (gp.player.x + 37) + gp.player.y * -Math.tan(0.3), -50, 8));
+			} else if (gp.bulletLevel >= 9) {
+				bullet.add(new Bullet(gp, gp.player.x - 30, -50, gp.player.x - 10, gp.player.y, 4));
+				bullet.add(new Bullet(gp, gp.player.x, -50, gp.player.x - 10, gp.player.y, 4));
+				bullet.add(new Bullet(gp, gp.player.x + 24, -50, gp.player.x - 10 + 48, gp.player.y, 4));
+				bullet.add(new Bullet(gp, gp.player.x + 55, -50, gp.player.x - 10 + 96, gp.player.y, 4));
+				bullet.add(new Bullet(gp, gp.player.x - 10 + 96, -50, gp.player.x - 10 + 96, gp.player.y, 4));
 			}
 		}
 	}
