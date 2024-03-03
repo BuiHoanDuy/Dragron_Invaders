@@ -32,7 +32,8 @@ public class BossList {
 					boss.get(i).lifes--;
 					// gp.playSE(5);
 
-					if (gp.bulletLevel < 10)
+					// Cài Ulti bắn xuyên đoọi hình địch
+					if (gp.ultiFlag == false)
 						gp.bulletList.bullet.remove(j);
 
 					// Delete monster

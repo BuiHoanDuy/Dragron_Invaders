@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		JFrame window = new JFrame();
-		window.setTitle("Ban Ga HoanDuy");
+		window.setTitle("Dragon_invaders of YisiniT_HoanDuy");
 		window.setResizable(false);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		

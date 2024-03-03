@@ -20,10 +20,15 @@ public class monsterBulletList {
 	}
 
 	public void createMonsterBulletList() {
-
+		int random;
 		// random the positon of monsterBullet and set the percentage of it.
 		int randomMonsterIndex = 0;
-		int random = ThreadLocalRandom.current().nextInt(1, gp.monsterBulletPercentageRandom);
+
+		if (gp.monsterBulletPercentageRandom == 1)
+			random = 1;
+		else {
+			random = ThreadLocalRandom.current().nextInt(1, gp.monsterBulletPercentageRandom);
+		}
 		if (gp.monsterList.monster.size() > 0) {
 			randomMonsterIndex = ThreadLocalRandom.current().nextInt(0, gp.monsterList.monster.size());
 			if (random == 1) {
@@ -35,10 +40,10 @@ public class monsterBulletList {
 	}
 
 	public void update() { // update position of monsterList
-
 		// reset counterForMonster
 		if (gp.countForMonsterBullet == 50)
 			gp.countForMonsterBullet = 0;
+		
 
 		if (gp.countForMonsterBullet == 1) {
 			createMonsterBulletList();

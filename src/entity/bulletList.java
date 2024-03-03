@@ -71,6 +71,7 @@ public class bulletList {
 			if (bullet.get(i).y < -20) {
 				bullet.remove(i);
 			}
+			
 		}
 
 	}
@@ -90,7 +91,7 @@ public class bulletList {
 				for (int i = 0; i < bullet.size(); i++) {
 					bullet.get(i).drawWindBall(g2);
 					
-					// prevent bulletLevel is over 7
+					// prevent bulletLevel is over 9
 					if (gp.bulletLevel > 9) gp.bulletLevel = 9;
 				}
 			} else {

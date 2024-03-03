@@ -100,7 +100,6 @@ public class Player extends Entity {
 				gp.monsterBulletList.bullet.remove(i);
 
 				// do something when Die
-				System.out.println("die");
 				gp.playSE(6);
 				lifes--;
 				if (gp.bulletLevel<=3) {

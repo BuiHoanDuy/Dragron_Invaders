@@ -88,7 +88,31 @@ public class MonsterList {
 			round22Set();
 			break;
 		case 23:
-			// round23Set();
+			round23Set();
+			break;
+		case 24:
+			round24Set();
+			break;
+		case 25:
+			round25Set();
+			break;
+		case 26:
+			round26Set();
+			break;
+		case 27:
+			round27Set();
+			break;
+		case 28:
+			round28Set();
+			break;
+		case 29:
+			round29Set();
+			break;
+		case 30:
+			round30Set();
+			break;
+		case 31:
+			round31Set();
 			break;
 		}
 	}
@@ -557,15 +581,484 @@ public class MonsterList {
 		monster.add(new Monster(gp, 912 - 24, 96, 20));
 	}
 
-	// add BOSS 2 IN ROUND 22
 	public void round22Set() {
 		gp.playSE(2);
+
+		gp.setValueForMonster(0, 8, 1);
+
+		monster.add(new Monster(gp, 48 - 24, 0, 20));
+		monster.add(new Monster(gp, 144 - 24, 0, 20));
+		monster.add(new Monster(gp, 240 - 24, 0, 20));
+		monster.add(new Monster(gp, 336 - 24, 0, 20));
+		monster.add(new Monster(gp, 432 - 24, 0, 20));
+		monster.add(new Monster(gp, 528 - 24, 0, 20));
+		monster.add(new Monster(gp, 624 - 24, 0, 20));
+		monster.add(new Monster(gp, 720 - 24, 0, 20));
+		monster.add(new Monster(gp, 816 - 24, 0, 20));
+		monster.add(new Monster(gp, 912 - 24, 0, 20));
+	}
+
+	public void round23Set() {
+		gp.playSE(2);
+
+		gp.setValueForMonster(0, 8, 1);
+
+		monster.add(new Monster(gp, 48 - 24, 0, 20));
+		monster.add(new Monster(gp, 144 - 24, 0, 20));
+		monster.add(new Monster(gp, 240 - 24, 0, 20));
+		monster.add(new Monster(gp, 336 - 24, 0, 20));
+		monster.add(new Monster(gp, 432 - 24, 0, 20));
+		monster.add(new Monster(gp, 528 - 24, 0, 20));
+		monster.add(new Monster(gp, 624 - 24, 0, 20));
+		monster.add(new Monster(gp, 720 - 24, 0, 20));
+		monster.add(new Monster(gp, 816 - 24, 0, 20));
+		monster.add(new Monster(gp, 912 - 24, 0, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 48, 20));
+		monster.add(new Monster(gp, 144 - 24, 48, 20));
+		monster.add(new Monster(gp, 240 - 24, 48, 20));
+		monster.add(new Monster(gp, 336 - 24, 48, 20));
+		monster.add(new Monster(gp, 432 - 24, 48, 20));
+		monster.add(new Monster(gp, 528 - 24, 48, 20));
+		monster.add(new Monster(gp, 624 - 24, 48, 20));
+		monster.add(new Monster(gp, 720 - 24, 48, 20));
+		monster.add(new Monster(gp, 816 - 24, 48, 20));
+		monster.add(new Monster(gp, 912 - 24, 48, 20));
+	}
+
+	public void round24Set() {
+		gp.playSE(2);
+
+		gp.setValueForMonster(0, 8, 1);
+
+		monster.add(new Monster(gp, 48 - 24, 0, 20));
+		monster.add(new Monster(gp, 144 - 24, 0, 20));
+		monster.add(new Monster(gp, 240 - 24, 0, 20));
+		monster.add(new Monster(gp, 336 - 24, 0, 20));
+		monster.add(new Monster(gp, 432 - 24, 0, 20));
+		monster.add(new Monster(gp, 528 - 24, 0, 20));
+		monster.add(new Monster(gp, 624 - 24, 0, 20));
+		monster.add(new Monster(gp, 720 - 24, 0, 20));
+		monster.add(new Monster(gp, 816 - 24, 0, 20));
+		monster.add(new Monster(gp, 912 - 24, 0, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 48, 20));
+		monster.add(new Monster(gp, 144 - 24, 48, 20));
+		monster.add(new Monster(gp, 240 - 24, 48, 20));
+		monster.add(new Monster(gp, 336 - 24, 48, 20));
+		monster.add(new Monster(gp, 432 - 24, 48, 20));
+		monster.add(new Monster(gp, 528 - 24, 48, 20));
+		monster.add(new Monster(gp, 624 - 24, 48, 20));
+		monster.add(new Monster(gp, 720 - 24, 48, 20));
+		monster.add(new Monster(gp, 816 - 24, 48, 20));
+		monster.add(new Monster(gp, 912 - 24, 48, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 96, 20));
+		monster.add(new Monster(gp, 144 - 24, 96, 20));
+		monster.add(new Monster(gp, 240 - 24, 96, 20));
+		monster.add(new Monster(gp, 336 - 24, 96, 20));
+		monster.add(new Monster(gp, 432 - 24, 96, 20));
+		monster.add(new Monster(gp, 528 - 24, 96, 20));
+		monster.add(new Monster(gp, 624 - 24, 96, 20));
+		monster.add(new Monster(gp, 720 - 24, 96, 20));
+		monster.add(new Monster(gp, 816 - 24, 96, 20));
+		monster.add(new Monster(gp, 912 - 24, 96, 20));
+	}
+
+	public void round25Set() {
+		gp.playSE(2);
+
+		gp.setValueForMonster(0, 8, 1);
+
+		monster.add(new Monster(gp, 48 - 24, 0, 20));
+		monster.add(new Monster(gp, 144 - 24, 0, 20));
+		monster.add(new Monster(gp, 240 - 24, 0, 20));
+		monster.add(new Monster(gp, 336 - 24, 0, 20));
+		monster.add(new Monster(gp, 432 - 24, 0, 20));
+		monster.add(new Monster(gp, 528 - 24, 0, 20));
+		monster.add(new Monster(gp, 624 - 24, 0, 20));
+		monster.add(new Monster(gp, 720 - 24, 0, 20));
+		monster.add(new Monster(gp, 816 - 24, 0, 20));
+		monster.add(new Monster(gp, 912 - 24, 0, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 48, 20));
+		monster.add(new Monster(gp, 144 - 24, 48, 20));
+		monster.add(new Monster(gp, 240 - 24, 48, 20));
+		monster.add(new Monster(gp, 336 - 24, 48, 20));
+		monster.add(new Monster(gp, 432 - 24, 48, 20));
+		monster.add(new Monster(gp, 528 - 24, 48, 20));
+		monster.add(new Monster(gp, 624 - 24, 48, 20));
+		monster.add(new Monster(gp, 720 - 24, 48, 20));
+		monster.add(new Monster(gp, 816 - 24, 48, 20));
+		monster.add(new Monster(gp, 912 - 24, 48, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 96, 20));
+		monster.add(new Monster(gp, 144 - 24, 96, 20));
+		monster.add(new Monster(gp, 240 - 24, 96, 20));
+		monster.add(new Monster(gp, 336 - 24, 96, 20));
+		monster.add(new Monster(gp, 432 - 24, 96, 20));
+		monster.add(new Monster(gp, 528 - 24, 96, 20));
+		monster.add(new Monster(gp, 624 - 24, 96, 20));
+		monster.add(new Monster(gp, 720 - 24, 96, 20));
+		monster.add(new Monster(gp, 816 - 24, 96, 20));
+		monster.add(new Monster(gp, 912 - 24, 96, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 144, 20));
+		monster.add(new Monster(gp, 144 - 24, 144, 20));
+		monster.add(new Monster(gp, 240 - 24, 144, 20));
+		monster.add(new Monster(gp, 336 - 24, 144, 20));
+		monster.add(new Monster(gp, 432 - 24, 144, 20));
+		monster.add(new Monster(gp, 528 - 24, 144, 20));
+		monster.add(new Monster(gp, 624 - 24, 144, 20));
+		monster.add(new Monster(gp, 720 - 24, 144, 20));
+		monster.add(new Monster(gp, 816 - 24, 144, 20));
+		monster.add(new Monster(gp, 912 - 24, 144, 20));
+	}
+
+	public void round26Set() {
+		gp.playSE(2);
+
+		gp.setValueForMonster(0, 8, 1);
+
+		monster.add(new Monster(gp, 48 - 24, 0, 20));
+		monster.add(new Monster(gp, 144 - 24, 0, 20));
+		monster.add(new Monster(gp, 240 - 24, 0, 20));
+		monster.add(new Monster(gp, 336 - 24, 0, 20));
+		monster.add(new Monster(gp, 432 - 24, 0, 20));
+		monster.add(new Monster(gp, 528 - 24, 0, 20));
+		monster.add(new Monster(gp, 624 - 24, 0, 20));
+		monster.add(new Monster(gp, 720 - 24, 0, 20));
+		monster.add(new Monster(gp, 816 - 24, 0, 20));
+		monster.add(new Monster(gp, 912 - 24, 0, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 48, 20));
+		monster.add(new Monster(gp, 144 - 24, 48, 20));
+		monster.add(new Monster(gp, 240 - 24, 48, 20));
+		monster.add(new Monster(gp, 336 - 24, 48, 20));
+		monster.add(new Monster(gp, 432 - 24, 48, 20));
+		monster.add(new Monster(gp, 528 - 24, 48, 20));
+		monster.add(new Monster(gp, 624 - 24, 48, 20));
+		monster.add(new Monster(gp, 720 - 24, 48, 20));
+		monster.add(new Monster(gp, 816 - 24, 48, 20));
+		monster.add(new Monster(gp, 912 - 24, 48, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 96, 20));
+		monster.add(new Monster(gp, 144 - 24, 96, 20));
+		monster.add(new Monster(gp, 240 - 24, 96, 20));
+		monster.add(new Monster(gp, 336 - 24, 96, 20));
+		monster.add(new Monster(gp, 432 - 24, 96, 20));
+		monster.add(new Monster(gp, 528 - 24, 96, 20));
+		monster.add(new Monster(gp, 624 - 24, 96, 20));
+		monster.add(new Monster(gp, 720 - 24, 96, 20));
+		monster.add(new Monster(gp, 816 - 24, 96, 20));
+		monster.add(new Monster(gp, 912 - 24, 96, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 144, 20));
+		monster.add(new Monster(gp, 144 - 24, 144, 20));
+		monster.add(new Monster(gp, 240 - 24, 144, 20));
+		monster.add(new Monster(gp, 336 - 24, 144, 20));
+		monster.add(new Monster(gp, 432 - 24, 144, 20));
+		monster.add(new Monster(gp, 528 - 24, 144, 20));
+		monster.add(new Monster(gp, 624 - 24, 144, 20));
+		monster.add(new Monster(gp, 720 - 24, 144, 20));
+		monster.add(new Monster(gp, 816 - 24, 144, 20));
+		monster.add(new Monster(gp, 912 - 24, 144, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 192, 20));
+		monster.add(new Monster(gp, 144 - 24, 192, 20));
+		monster.add(new Monster(gp, 240 - 24, 192, 20));
+		monster.add(new Monster(gp, 336 - 24, 192, 20));
+		monster.add(new Monster(gp, 432 - 24, 192, 20));
+		monster.add(new Monster(gp, 528 - 24, 192, 20));
+		monster.add(new Monster(gp, 624 - 24, 192, 20));
+		monster.add(new Monster(gp, 720 - 24, 192, 20));
+		monster.add(new Monster(gp, 816 - 24, 192, 20));
+		monster.add(new Monster(gp, 912 - 24, 192, 20));
+	}
+
+	public void round27Set() {
+		gp.playSE(2);
+
+		gp.setValueForMonster(1, 10, 1);
+
+		monster.add(new Monster(gp, 48 - 24, 0, 20));
+		monster.add(new Monster(gp, 144 - 24, 0, 20));
+		monster.add(new Monster(gp, 240 - 24, 0, 20));
+		monster.add(new Monster(gp, 336 - 24, 0, 20));
+		monster.add(new Monster(gp, 432 - 24, 0, 20));
+		monster.add(new Monster(gp, 528 - 24, 0, 20));
+		monster.add(new Monster(gp, 624 - 24, 0, 20));
+		monster.add(new Monster(gp, 720 - 24, 0, 20));
+		monster.add(new Monster(gp, 816 - 24, 0, 20));
+		monster.add(new Monster(gp, 912 - 24, 0, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 48, 20));
+		monster.add(new Monster(gp, 144 - 24, 48, 20));
+		monster.add(new Monster(gp, 240 - 24, 48, 20));
+		monster.add(new Monster(gp, 336 - 24, 48, 20));
+		monster.add(new Monster(gp, 432 - 24, 48, 20));
+		monster.add(new Monster(gp, 528 - 24, 48, 20));
+		monster.add(new Monster(gp, 624 - 24, 48, 20));
+		monster.add(new Monster(gp, 720 - 24, 48, 20));
+		monster.add(new Monster(gp, 816 - 24, 48, 20));
+		monster.add(new Monster(gp, 912 - 24, 48, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 96, 20));
+		monster.add(new Monster(gp, 144 - 24, 96, 20));
+		monster.add(new Monster(gp, 240 - 24, 96, 20));
+		monster.add(new Monster(gp, 336 - 24, 96, 20));
+		monster.add(new Monster(gp, 432 - 24, 96, 20));
+		monster.add(new Monster(gp, 528 - 24, 96, 20));
+		monster.add(new Monster(gp, 624 - 24, 96, 20));
+		monster.add(new Monster(gp, 720 - 24, 96, 20));
+		monster.add(new Monster(gp, 816 - 24, 96, 20));
+		monster.add(new Monster(gp, 912 - 24, 96, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 144, 20));
+		monster.add(new Monster(gp, 144 - 24, 144, 20));
+		monster.add(new Monster(gp, 240 - 24, 144, 20));
+		monster.add(new Monster(gp, 336 - 24, 144, 20));
+		monster.add(new Monster(gp, 432 - 24, 144, 20));
+		monster.add(new Monster(gp, 528 - 24, 144, 20));
+		monster.add(new Monster(gp, 624 - 24, 144, 20));
+		monster.add(new Monster(gp, 720 - 24, 144, 20));
+		monster.add(new Monster(gp, 816 - 24, 144, 20));
+		monster.add(new Monster(gp, 912 - 24, 144, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 192, 20));
+		monster.add(new Monster(gp, 144 - 24, 192, 20));
+		monster.add(new Monster(gp, 240 - 24, 192, 20));
+		monster.add(new Monster(gp, 336 - 24, 192, 20));
+		monster.add(new Monster(gp, 432 - 24, 192, 20));
+		monster.add(new Monster(gp, 528 - 24, 192, 20));
+		monster.add(new Monster(gp, 624 - 24, 192, 20));
+		monster.add(new Monster(gp, 720 - 24, 192, 20));
+		monster.add(new Monster(gp, 816 - 24, 192, 20));
+		monster.add(new Monster(gp, 912 - 24, 192, 20));
+	}
+
+	public void round28Set() {
+		gp.playSE(2);
+
+		gp.setValueForMonster(1, 10, 1);
+
+		monster.add(new Monster(gp, 48 - 24, 0, 20));
+		monster.add(new Monster(gp, 144 - 24, 0, 20));
+		monster.add(new Monster(gp, 240 - 24, 0, 20));
+		monster.add(new Monster(gp, 336 - 24, 0, 20));
+		monster.add(new Monster(gp, 432 - 24, 0, 20));
+		monster.add(new Monster(gp, 528 - 24, 0, 20));
+		monster.add(new Monster(gp, 624 - 24, 0, 20));
+		monster.add(new Monster(gp, 720 - 24, 0, 20));
+		monster.add(new Monster(gp, 816 - 24, 0, 20));
+		monster.add(new Monster(gp, 912 - 24, 0, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 48, 20));
+		monster.add(new Monster(gp, 144 - 24, 48, 20));
+		monster.add(new Monster(gp, 240 - 24, 48, 20));
+		monster.add(new Monster(gp, 336 - 24, 48, 20));
+		monster.add(new Monster(gp, 432 - 24, 48, 20));
+		monster.add(new Monster(gp, 528 - 24, 48, 20));
+		monster.add(new Monster(gp, 624 - 24, 48, 20));
+		monster.add(new Monster(gp, 720 - 24, 48, 20));
+		monster.add(new Monster(gp, 816 - 24, 48, 20));
+		monster.add(new Monster(gp, 912 - 24, 48, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 96, 20));
+		monster.add(new Monster(gp, 144 - 24, 96, 20));
+		monster.add(new Monster(gp, 240 - 24, 96, 20));
+		monster.add(new Monster(gp, 336 - 24, 96, 20));
+		monster.add(new Monster(gp, 432 - 24, 96, 20));
+		monster.add(new Monster(gp, 528 - 24, 96, 20));
+		monster.add(new Monster(gp, 624 - 24, 96, 20));
+		monster.add(new Monster(gp, 720 - 24, 96, 20));
+		monster.add(new Monster(gp, 816 - 24, 96, 20));
+		monster.add(new Monster(gp, 912 - 24, 96, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 144, 20));
+		monster.add(new Monster(gp, 144 - 24, 144, 20));
+		monster.add(new Monster(gp, 240 - 24, 144, 20));
+		monster.add(new Monster(gp, 336 - 24, 144, 20));
+		monster.add(new Monster(gp, 432 - 24, 144, 20));
+		monster.add(new Monster(gp, 528 - 24, 144, 20));
+		monster.add(new Monster(gp, 624 - 24, 144, 20));
+		monster.add(new Monster(gp, 720 - 24, 144, 20));
+		monster.add(new Monster(gp, 816 - 24, 144, 20));
+		monster.add(new Monster(gp, 912 - 24, 144, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 192, 20));
+		monster.add(new Monster(gp, 144 - 24, 192, 20));
+		monster.add(new Monster(gp, 240 - 24, 192, 20));
+		monster.add(new Monster(gp, 336 - 24, 192, 20));
+		monster.add(new Monster(gp, 432 - 24, 192, 20));
+		monster.add(new Monster(gp, 528 - 24, 192, 20));
+		monster.add(new Monster(gp, 624 - 24, 192, 20));
+		monster.add(new Monster(gp, 720 - 24, 192, 20));
+		monster.add(new Monster(gp, 816 - 24, 192, 20));
+		monster.add(new Monster(gp, 912 - 24, 192, 20));
+	}
+
+	public void round29Set() {
+		gp.playSE(2);
+
+		gp.setValueForMonster(2, 12, 1);
+
+		monster.add(new Monster(gp, 48 - 24, 0, 20));
+		monster.add(new Monster(gp, 144 - 24, 0, 20));
+		monster.add(new Monster(gp, 240 - 24, 0, 20));
+		monster.add(new Monster(gp, 336 - 24, 0, 20));
+		monster.add(new Monster(gp, 432 - 24, 0, 20));
+		monster.add(new Monster(gp, 528 - 24, 0, 20));
+		monster.add(new Monster(gp, 624 - 24, 0, 20));
+		monster.add(new Monster(gp, 720 - 24, 0, 20));
+		monster.add(new Monster(gp, 816 - 24, 0, 20));
+		monster.add(new Monster(gp, 912 - 24, 0, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 48, 20));
+		monster.add(new Monster(gp, 144 - 24, 48, 20));
+		monster.add(new Monster(gp, 240 - 24, 48, 20));
+		monster.add(new Monster(gp, 336 - 24, 48, 20));
+		monster.add(new Monster(gp, 432 - 24, 48, 20));
+		monster.add(new Monster(gp, 528 - 24, 48, 20));
+		monster.add(new Monster(gp, 624 - 24, 48, 20));
+		monster.add(new Monster(gp, 720 - 24, 48, 20));
+		monster.add(new Monster(gp, 816 - 24, 48, 20));
+		monster.add(new Monster(gp, 912 - 24, 48, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 96, 20));
+		monster.add(new Monster(gp, 144 - 24, 96, 20));
+		monster.add(new Monster(gp, 240 - 24, 96, 20));
+		monster.add(new Monster(gp, 336 - 24, 96, 20));
+		monster.add(new Monster(gp, 432 - 24, 96, 20));
+		monster.add(new Monster(gp, 528 - 24, 96, 20));
+		monster.add(new Monster(gp, 624 - 24, 96, 20));
+		monster.add(new Monster(gp, 720 - 24, 96, 20));
+		monster.add(new Monster(gp, 816 - 24, 96, 20));
+		monster.add(new Monster(gp, 912 - 24, 96, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 144, 20));
+		monster.add(new Monster(gp, 144 - 24, 144, 20));
+		monster.add(new Monster(gp, 240 - 24, 144, 20));
+		monster.add(new Monster(gp, 336 - 24, 144, 20));
+		monster.add(new Monster(gp, 432 - 24, 144, 20));
+		monster.add(new Monster(gp, 528 - 24, 144, 20));
+		monster.add(new Monster(gp, 624 - 24, 144, 20));
+		monster.add(new Monster(gp, 720 - 24, 144, 20));
+		monster.add(new Monster(gp, 816 - 24, 144, 20));
+		monster.add(new Monster(gp, 912 - 24, 144, 20));
+
+		monster.add(new Monster(gp, 48 - 24, 192, 20));
+		monster.add(new Monster(gp, 144 - 24, 192, 20));
+		monster.add(new Monster(gp, 240 - 24, 192, 20));
+		monster.add(new Monster(gp, 336 - 24, 192, 20));
+		monster.add(new Monster(gp, 432 - 24, 192, 20));
+		monster.add(new Monster(gp, 528 - 24, 192, 20));
+		monster.add(new Monster(gp, 624 - 24, 192, 20));
+		monster.add(new Monster(gp, 720 - 24, 192, 20));
+		monster.add(new Monster(gp, 816 - 24, 192, 20));
+		monster.add(new Monster(gp, 912 - 24, 192, 20));
+	}
+
+	public void round30Set() {
+		gp.playSE(2);
+
+		gp.setValueForMonster(2, 12, 1);
+
+		monster.add(new Monster(gp, 48 - 24, 0, 50));
+		monster.add(new Monster(gp, 144 - 24, 0, 50));
+		monster.add(new Monster(gp, 240 - 24, 0, 50));
+		monster.add(new Monster(gp, 336 - 24, 0, 50));
+		monster.add(new Monster(gp, 432 - 24, 0, 50));
+		monster.add(new Monster(gp, 528 - 24, 0, 50));
+		monster.add(new Monster(gp, 624 - 24, 0, 50));
+		monster.add(new Monster(gp, 720 - 24, 0, 50));
+		monster.add(new Monster(gp, 816 - 24, 0, 50));
+		monster.add(new Monster(gp, 912 - 24, 0, 50));
+
+		monster.add(new Monster(gp, 48 - 24, 48, 50));
+		monster.add(new Monster(gp, 144 - 24, 48, 50));
+		monster.add(new Monster(gp, 240 - 24, 48, 50));
+		monster.add(new Monster(gp, 336 - 24, 48, 50));
+		monster.add(new Monster(gp, 432 - 24, 48, 50));
+		monster.add(new Monster(gp, 528 - 24, 48, 50));
+		monster.add(new Monster(gp, 624 - 24, 48, 50));
+		monster.add(new Monster(gp, 720 - 24, 48, 50));
+		monster.add(new Monster(gp, 816 - 24, 48, 50));
+		monster.add(new Monster(gp, 912 - 24, 48, 50));
+
+		monster.add(new Monster(gp, 48 - 24, 96, 50));
+		monster.add(new Monster(gp, 144 - 24, 96, 50));
+		monster.add(new Monster(gp, 240 - 24, 96, 50));
+		monster.add(new Monster(gp, 336 - 24, 96, 50));
+		monster.add(new Monster(gp, 432 - 24, 96, 50));
+		monster.add(new Monster(gp, 528 - 24, 96, 50));
+		monster.add(new Monster(gp, 624 - 24, 96, 50));
+		monster.add(new Monster(gp, 720 - 24, 96, 50));
+		monster.add(new Monster(gp, 816 - 24, 96, 50));
+		monster.add(new Monster(gp, 912 - 24, 96, 50));
+
+		monster.add(new Monster(gp, 48 - 24, 144, 50));
+		monster.add(new Monster(gp, 144 - 24, 144, 50));
+		monster.add(new Monster(gp, 240 - 24, 144, 50));
+		monster.add(new Monster(gp, 336 - 24, 144, 50));
+		monster.add(new Monster(gp, 432 - 24, 144, 50));
+		monster.add(new Monster(gp, 528 - 24, 144, 50));
+		monster.add(new Monster(gp, 624 - 24, 144, 50));
+		monster.add(new Monster(gp, 720 - 24, 144, 50));
+		monster.add(new Monster(gp, 816 - 24, 144, 50));
+		monster.add(new Monster(gp, 912 - 24, 144, 50));
+
+		monster.add(new Monster(gp, 48 - 24, 192, 50));
+		monster.add(new Monster(gp, 144 - 24, 192, 50));
+		monster.add(new Monster(gp, 240 - 24, 192, 50));
+		monster.add(new Monster(gp, 336 - 24, 192, 50));
+		monster.add(new Monster(gp, 432 - 24, 192, 50));
+		monster.add(new Monster(gp, 528 - 24, 192, 50));
+		monster.add(new Monster(gp, 624 - 24, 192, 50));
+		monster.add(new Monster(gp, 720 - 24, 192, 50));
+		monster.add(new Monster(gp, 816 - 24, 192, 50));
+		monster.add(new Monster(gp, 912 - 24, 192, 50));
+	}
+
+	// add BOSS 2 IN ROUND 31 ----- END
+	public void round31Set() {
+		gp.playSE(2);
+		gp.setValueForMonster(2, 14, 1);
 		if (gp.bossFlag == false) {
 			gp.bossLevel = 2;
 			gp.playSE(2);
-			gp.bossList.boss.add(new Boss(gp, 364, 48, 500));
+
+			monster.add(new Monster(gp, 48 - 24, 48, 5));
+			monster.add(new Monster(gp, 144 - 24, 48, 50));
+			monster.add(new Monster(gp, 240 - 24, 48, 50));
+			monster.add(new Monster(gp, 336 - 24, 48, 50));
+			monster.add(new Monster(gp, 432 - 24, 48, 50));
+			monster.add(new Monster(gp, 528 - 24, 48, 50));
+			monster.add(new Monster(gp, 624 - 24, 48, 50));
+			monster.add(new Monster(gp, 720 - 24, 48, 50));
+			monster.add(new Monster(gp, 816 - 24, 48, 50));
+			monster.add(new Monster(gp, 912 - 24, 48, 50));
+			
+			monster.add(new Monster(gp, 48 - 24, 0, 50));
+			monster.add(new Monster(gp, 144 - 24, 0, 50));
+			monster.add(new Monster(gp, 240 - 24, 0, 50));
+			monster.add(new Monster(gp, 336 - 24, 0, 50));
+			monster.add(new Monster(gp, 432 - 24, 0, 50));
+			monster.add(new Monster(gp, 528 - 24, 0, 50));
+			monster.add(new Monster(gp, 624 - 24, 0, 50));
+			monster.add(new Monster(gp, 720 - 24, 0, 50));
+			monster.add(new Monster(gp, 816 - 24, 0, 50));
+			monster.add(new Monster(gp, 912 - 24, 0, 50));
+
+			gp.bossList.boss.add(new Boss(gp, 364, 96, 50));
 			gp.bossFlag = true;
 		}
+
+	}
+
+	public void round32Set() {
+		monster.add(new Monster(gp, -100, 900, 5));
+		gp.bossFlag = false;
 
 	}
 
@@ -615,13 +1108,16 @@ public class MonsterList {
 		}
 
 		// when monsterList is NULL:
-		if (gp.monsterList.monster.size() == 0) {
-			roundSet(round);
-			gp.playSE(4); // levelUp sound
-			// tạo ra hàm RoundSet(int round), trong hàm RoundSet thì đưa các hàm vẽ Map
-			// vào.
-			gp.round++; // Increase roundLevel
-		}
+		if (gp.round <= 33) {
+			if (gp.monsterList.monster.size() == 0) {
+				roundSet(round);
+				gp.playSE(4); // levelUp sound
+				// tạo ra hàm RoundSet(int round), trong hàm RoundSet thì đưa các hàm vẽ Map
+				// vào.
+				gp.round++; // Increase roundLevel
+			}
+		} else
+			gp.menuCheck = 5;
 	}
 
 	public void draw(Graphics2D g2) {
@@ -629,5 +1125,10 @@ public class MonsterList {
 		for (int i = 0; i < monster.size(); i++) {
 			monster.get(i).draw(g2);
 		}
+	}
+	
+	public void reset() { // use when player lose
+		monster.clear();
+		monsterBulletList.clear();
 	}
 }
