@@ -1050,7 +1050,7 @@ public class MonsterList {
 			monster.add(new Monster(gp, 816 - 24, 0, 50));
 			monster.add(new Monster(gp, 912 - 24, 0, 50));
 
-			gp.bossList.boss.add(new Boss(gp, 364, 96, 50));
+			gp.bossList.boss.add(new Boss(gp, 364, 96, 500));
 			gp.bossFlag = true;
 		}
 
